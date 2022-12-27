@@ -597,7 +597,11 @@ transform: scale(0.3);
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-
+  .close-window:hover,
+  .close-window:focus{
+    background: #404BBF;
+    fill: var(--primary-bcg-color);
+  }
   /* Forma */
 
   .modal-title{
@@ -756,14 +760,17 @@ cursor: pointer;
   opacity: 0;
   transition: opacity var(--transition-func);
 }
-.mf-check:checked:focus + .mf-fake-check{
+.mf-check:checked + .mf-fake-check{
   background-color: var(--accent-color);
   outline: none;
   border: 1.25px solid #4D5AE5;
   border-radius: 2px;
   }
-  .mf-check:checked:focus + * .mf-galka{
+  .mf-check:checked + * .mf-galka{
     opacity: 1;
+  }
+  .policy{
+    color: var(--accent-color);
   }
 
   .mf-button{
@@ -775,7 +782,10 @@ cursor: pointer;
 font-size: 16px;
 line-height: 1.33;
 letter-spacing: 0.04em;
-color: var(--accent-color);
+color:var(--primary-bcg-color);
+background-color: var(--accent-color);
+border-color: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 padding: 16px 32px;
 margin: 0 auto;
 outline: none;
@@ -783,10 +793,3 @@ transition: background-color var(--transition-func),
 color var(--transition-func);
 }
  
-.mf-button:hover,
-.mf-button:focus{
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  color:var(--primary-bcg-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
